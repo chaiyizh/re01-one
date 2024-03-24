@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 布局</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: #eee;
+      }
+      /* *{
+        border: 1px solid black;
+      }  */
+      .flex {
+        display: flex;
+      }
+      .background {
+        background-color: white;
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .colum {
+        flex-direction: column;
+      }
+      .mg8 {
+        margin: 8px;
+      }
+      .mgr8 {
+        margin-right: 8px;
+      }
+      .mgt8 {
+        margin-top: 8px;
+      }
+      .daohang{
+        padding: 10px 20px;
+        border-bottom: 1px solid rgb(90, 88, 88);
+        font-size:14px;
+        color:#666
+      }
+    </style>
+  </head>
+  <body class="flex">
+    <!--侧边栏-->
+    <div style="width: 200px; z-index: 2" class="background">
+        <!--头像栏-->
+            <div style="padding:10px;align-items: center;justify-content: center;border-bottom: 1px solid #080808;" class="flex">
+                <img src="zhe.jpg" width="39" height="57" alt=""></img>
+                <div style="margin-left: 10px;">柴一哲</div>
+            </div>
+        <!--导航栏-->
+        <div class="flex1">
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+            <div class="daohang">导航</div>
+        </div>
+    </div>
+    <!--主区域-->
+    <div class="flex1 flex colum">
+      <!--头部栏-->
+      <div style="height: 60px; z-index: 1" class="background"></div>
+      <!--内容区-->
+      <div style="overflow: auto" class="flex1 flex">
+        <!--左区-->
+        <div style="flex: 3" class="flex mg8 colum">
+          <!--数据区-->
+          <div class="flex">
+            <!--数据块-->
+            <div style="height: 100px" class="flex1 mgr8 background"></div>
+            <div style="height: 100px" class="flex1 mgr8 background"></div>
+            <div style="height: 100px" class="flex1 mgr8 background"></div>
+            <div style="height: 100px" class="flex1 background"></div>
+          </div>
+          <!--列表区-->
+          <div class="flex colum">
+            <!--列表项-->
+            <div style="height: 160px" class="background mgt8"></div>
+            <div style="height: 160px" class="background mgt8"></div>
+            <div style="height: 160px" class="background mgt8"></div>
+            <div style="height: 160px" class="background mgt8"></div>
+            <div style="height: 160px" class="background mgt8"></div>
+            <div style="height: 160px" class="background mgt8"></div>
+          </div>
+        </div>
+        <!--右区-->
+        <div style="flex: 1" class="flex colum mgt8 mgr8">
+          <!--提示区-->
+          <div style="height: 150px" class="background"></div>
+          <!--消息区-->
+          <div style="height: 300px" class="background mgt8"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
